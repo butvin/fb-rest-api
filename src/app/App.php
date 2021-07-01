@@ -5,7 +5,6 @@ namespace Butvin\ForeverYoung;
 
 
 use FacebookAds\Api;
-
 use FacebookAds\Object\AdAccount;
 use FacebookAds\Object\Fields\AdSetFields;
 
@@ -15,7 +14,7 @@ use FacebookAds\Logger\CurlLogger;
 $app_id = getenv('APP_ID');
 $app_secret = getenv('APP_SECRET');
 $access_token = getenv('ACCESS_TOKEN');
-$account_id = getenv(ID);
+$account_id = getenv('ACCOUNT_ID');
 
 // Initialize a new Session and instantiate an Api object
 Api::init($app_id, $app_secret, $access_token);

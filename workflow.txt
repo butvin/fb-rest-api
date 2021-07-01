@@ -1,11 +1,121 @@
 
-To see the ads volume for your ad account:
+
+
+
+
 -----------------------------------------------------------------
 
+-----------------------------------------------------------------
+curl -X GET -G \
+-d 'access_token=EAARYKtBiDpgBAG3z1GwBZACyPwFePcTxhZCuZBTl02HdEuUwZBqJ5VrgL0ZAOBGF4TF4ONBSBXwheA2f3wjkF5yGo85JSNQb8zdcCRqHccfxH36UjWD79402uZAbQZBabqR4AuxvCo8pqg7jrCFLorrixVRVeQHl6wOYSiZAI4qbP9XUAzRVXuNnepjwyz3kemBIcZAD9AraeKJc5nQfgHkPS3Knvz1fsALgZD' \
+https://graph.facebook.com/v11.0/143996961131091/
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------
+To get the access token for APPLICATION:
+-----------------------------------------------------------------
+curl -X GET "https://graph.facebook.com/oauth/access_token?client_id={your-current-app-id}&client_secret={your-current-app-secret}&grant_type=client_credentials"
+-----------------------------------------------------------------
+APP_ID {your-current-app-id}
+APP_SECRET {your-current-app-secret}
+-----------------------------------------------------------------
+{
+  "access_token": "1222840814800536|z39jx0sjI0Gzu5xZa06nr95JIvo",
+  "token_type": "bearer"
+}
+-----------------------------------------------------------------
+Существует ещё один способ отправки вызовов к API Graph, при котором маркер доступа приложения не требуется.
+Вы можете просто передать ID и секрет приложения как параметр access_token:
+
+curl -i -X GET "https://graph.facebook.com/{api-endpoint}&access_token={your-app_id}|{your-app_secret}
+
+
+
+
+
+
+
+-----------------------------------------------------------------
+Маркеры доступа к Страницам
+-----------------------------------------------------------------
+Эти маркеры используются в вызовах API Graph для управления Страницами Facebook.
+Чтобы можно было сгенерировать такой маркер доступа, администратор Страницы должен предоставить вашему приложению необходимые разрешения для Страницы.
+После этого вы сможете получить маркер доступа к Странице, используя маркер доступа пользователя с нужными разрешениями.
+-----------------------------------------------------------------
+{your-user-id}
+{user-access-token}
+-----------------------------------------------------------------
+curl -i -X GET "https://graph.facebook.com/{your-user-id}/accounts?access_token={user-access-token}
+-----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------
+Hайти рекламу, связанную с вопросами общественной значимости,
+выборами и политикой, содержащую слово "калифорния", которая показывалась аудитории в США, вам нужно ввести этот запрос:
+-----------------------------------------------------------------
+ACCESS_TOKEN
+API_VERSION
+-----------------------------------------------------------------
+curl -G \
+-d "search_terms='california'" \
+-d "ad_type=POLITICAL_AND_ISSUE_ADS" \
+-d "ad_reached_countries=['US']" \
+-d "access_token=<ACCESS_TOKEN>" \
+"https://graph.facebook.com/<API_VERSION>/ads_archive"
+-----------------------------------------------------------------
+{
+  "error": {
+    "message": "Application does not have permission for this action",
+    "type": "OAuthException",
+    "code": 10,
+    "error_subcode": 2332002,
+    "is_transient": false,
+    "error_user_title": "Authorization and login needed",
+    "error_user_msg": "To access the API, you'll need to follow the steps at facebook.com\/ads\/library\/api.",
+    "fbtrace_id": "AC-cEAbbeUjm09VKPAkMkqG"
+  }
+}
+-----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------
+To see the ads volume for your ad account:
+-----------------------------------------------------------------
 curl -G
 -d "access_token=<access_token>"
 "https://graph.facebook.com/<API_VERSION>/act_<ad_account_ID>/ads_volume"
-
 -----------------------------------------------------------------
 
 
