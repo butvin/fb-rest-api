@@ -24,7 +24,10 @@ $api = Api::instance();
 $api->setLogger(new CurlLogger());
 
 $account = new AdAccount($account_id);
-$account->read(array('id'));
+//$account->read(array('id'));
+
+
+
 
 
 /* PHP SDK v5.0.0

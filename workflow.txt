@@ -20,14 +20,14 @@ https://graph.facebook.com/v11.0/143996961131091/
 
 
 
------------------------------------------------------------------
+
 To get the access token for APPLICATION:
 -----------------------------------------------------------------
 curl -X GET "https://graph.facebook.com/oauth/access_token?client_id={your-current-app-id}&client_secret={your-current-app-secret}&grant_type=client_credentials"
------------------------------------------------------------------
+
 APP_ID {your-current-app-id}
 APP_SECRET {your-current-app-secret}
------------------------------------------------------------------
+
 {
   "access_token": "1222840814800536|z39jx0sjI0Gzu5xZa06nr95JIvo",
   "token_type": "bearer"
