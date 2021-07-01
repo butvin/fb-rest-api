@@ -1,0 +1,82 @@
+https://www.facebook.com/apps/site_scraping_tos_terms.php?hc_location=ufi
+-----------------------------------------------------------------
+
+
+
+
+
+
+-----------------------------------------------------------------
+To see the ads volume for your ad account:
+-----------------------------------------------------------------
+
+
+curl -G \
+-d "access_token=<access_token>" \
+"https://graph.facebook.com/<API_VERSION>/act_<ad_account_ID>/ads_volume"
+
+
+
+
+curl -G \
+-d "access_token=EAARYKtBiDpgBAClf5ChAbI67c0CdxFDNCmyoqUr0epwpyZBhFVcisZAxMTTvvqv3EFUhINSf1ddRTNgs3KYrZCbEvgzFZANJJXIATwoqvVrXdNZAtPH9ktTA334lcGdaKxyaqMUqD3JrTUcmB1CvElWQrHZCpOI2fGckZCDLzmJqigENO8Ax1ZAiOxH4tZB05ZCrGAyZBLOZCBJtwwZDZD" \
+"https://graph.facebook.com/v11.0/act_836047140345463/ads_volume"
+
+
+
+{
+  "error": {
+    "message": "API calls from the server require an appsecret_proof argument",
+    "type": "GraphMethodException",
+    "code": 100,
+    "fbtrace_id": "AZyKbOVBMGGYfwPRErQUe2j"
+  }
+}
+-----------------------------------------------------------------
+
+
+curl -G \
+-d "search_terms='california'" \
+-d "ad_type=POLITICAL_AND_ISSUE_ADS" \
+-d "ad_reached_countries=['US']" \
+-d "access_token=EAARYKtBiDpgBAClf5ChAbI67c0CdxFDNCmyoqUr0epwpyZBhFVcisZAxMTTvvqv3EFUhINSf1ddRTNgs3KYrZCbEvgzFZANJJXIATwoqvVrXdNZAtPH9ktTA334lcGdaKxyaqMUqD3JrTUcmB1CvElWQrHZCpOI2fGckZCDLzmJqigENO8Ax1ZAiOxH4tZB05ZCrGAyZBLOZCBJtwwZDZD" \
+"https://graph.facebook.com/v11.0/ads_archive" \
+
+
+
+
+{
+  "error": {
+    "message": "API calls from the server require an appsecret_proof argument",
+    "type": "GraphMethodException",
+    "code": 100,
+    "fbtrace_id": "AyhKxwJ8ls949mlEkvpSDLj"
+  }
+}
+
+
+
+
+-----------------------------------------------------------------
+Вы можете запросить определенные поля в виде списка с разделителями-запятыми в параметрах fields:
+-----------------------------------------------------------------
+
+curl -G \
+-d "fields=impressions" \
+-d "access_token=<ACCESS_TOKEN>" \
+"https://graph.facebook.com/<API_VERSION>/<AD_OBJECT_ID>/insights"
+
+-----------------------------------------------------------------  
+
+
+composer require vlucas/phpdotenv --no-dev
+
+
+
+
+
+
+composer require facebook/php-business-sdk
+composer require vlucas/phpdotenv
+
+composer install --no-dev

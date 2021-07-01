@@ -1,0 +1,26 @@
+{
+  "name": "fb-rest-api",
+  "version": "1.0.0",
+  "description": "Apps types: (5) ------------------------------------------------------------------------------- I. потребительское приложение, (например вход через Facebook.)             email             instagram_graph_user_media             instagram_graph_user_profile             public_profile             user_age_range             user_birthday             user_friends             user_gender             user_hometown             user_likes             user_link             user_location             user_photos             user_posts             user_videos",
+  "main": "index.js",
+  "scripts": {
+    "test": "testMe"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/butvin/fb-rest-api.git"
+  },
+  "keywords": [
+    "API",
+    "Facebook"
+  ],
+  "author": "butvin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/butvin/fb-rest-api/issues"
+  },
+  "homepage": "https://github.com/butvin/fb-rest-api#readme",
+  "dependencies": {
+    "facebook-nodejs-business-sdk": "^11.0.0"
+  }
+}

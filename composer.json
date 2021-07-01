@@ -1,0 +1,20 @@
+{
+    "name": "butvin/forever-young",
+    "description": "Testing app for overview Facebook APIs",
+    "autoload": {
+        "psr-4": {
+            "Butvin\\ForeverYoung\\": "src/app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "butvin",
+            "email": "butvin.s@wouff.org"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "facebook/php-business-sdk": "^11.0",
+        "vlucas/phpdotenv": "^5.3"
+    }
+}

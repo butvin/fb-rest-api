@@ -1,0 +1,22 @@
+
+To see the ads volume for your ad account:
+-----------------------------------------------------------------
+
+curl -G
+-d "access_token=<access_token>"
+"https://graph.facebook.com/<API_VERSION>/act_<ad_account_ID>/ads_volume"
+
+-----------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------
+
+curl -G \
+-d "search_terms='california'" \
+-d "ad_type=POLITICAL_AND_ISSUE_ADS" \
+-d "ad_reached_countries=['US']" \
+-d "access_token=<ACCESS_TOKEN>" \
+"https://graph.facebook.com/<API_VERSION>/ads_archive"
+
+-----------------------------------------------------------------
