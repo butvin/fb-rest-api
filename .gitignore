@@ -1,4 +1,4 @@
 .idea/
 vendor/
-.env
+#.env
 node_modules/
